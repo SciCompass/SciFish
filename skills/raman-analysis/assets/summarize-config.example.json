@@ -1,0 +1,18 @@
+{
+  "mid_shift_artifact_range": [1850.0, 2250.0],
+  "high_shift_broad_range": [2500.0, 3200.0],
+  "mid_shift_support_tolerance_cm": 35.0,
+  "high_shift_support_tolerance_cm": 35.0,
+  "mid_shift_max_width_cm": 80.0,
+  "mid_shift_min_prominence_abs": 25.0,
+  "mid_shift_min_prominence_noise_factor": 6.0,
+  "high_shift_min_prominence_abs": 30.0,
+  "high_shift_min_prominence_noise_factor": 8.0,
+  "broad_smooth_span_cm": 45.0,
+  "broad_distance_cm": 60.0,
+  "broad_prominence_factor": 0.03,
+  "broad_prominence_min_abs": 3.0,
+  "baseline_window_cap_points": 801,
+  "baseline_window_floor_points": 101,
+  "baseline_window_fraction": 0.25
+}

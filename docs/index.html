@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SciFish — open-source AI-Agent skill library for materials characterization</title>
+<meta name="description" content="Expert-validated, Agent-native skills that turn raw materials-characterization instrument exports into journal-grade figures and structured analysis reports." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%AC%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="./">
+      <span class="brand-mark">⌬</span>
+      <span class="brand-name">SciFish</span>
+      <span class="brand-tag">v1.0</span>
+    </a>
+    <nav class="topnav">
+      <a href="#skills">Skills</a>
+      <a href="#install">Install</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#contributing">Contributing</a>
+      <a class="ghlink" href="https://github.com/SciCompass/SciFish">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Open-source · MIT · v1.0 · 10 instruments</p>
+    <h1>Agent-native skills for<br/>materials characterization.</h1>
+    <p class="lede">
+      SciFish is a curated set of expert-validated Skills that turn raw
+      materials-characterization instrument exports into journal-grade figures
+      and structured analysis reports. Drop a Skill into any Skill-aware AI
+      Agent and the Agent gains the analytical judgment of a domain specialist
+      for that instrument.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#install">Get started</a>
+      <a class="btn btn-ghost" href="https://github.com/SciCompass/SciFish">View on GitHub ↗</a>
+    </div>
+    <p class="hero-meta">
+      Works with <strong>Claude Code</strong> · <strong>Codex CLI</strong>
+    </p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container three-col">
+    <article>
+      <h3>Self-contained &amp; portable</h3>
+      <p>Each Skill is a standalone directory: <code>SKILL.md</code>,
+      <code>scripts/</code>, <code>references/</code>, <code>assets/</code>.
+      Drop it into your Agent. No project glue code, no global config.</p>
+    </article>
+    <article>
+      <h3>Conservative by construction</h3>
+      <p>Every Skill enforces explicit separation between observed values and
+      inferred assignments, and blocks common over-claims (phase identity from
+      a single XRD scan; surface free energy from a sessile-drop screenshot).</p>
+    </article>
+    <article>
+      <h3>Journal-grade figures</h3>
+      <p>Every Skill emits a <code>.pdf</code> (vector, submission-ready) and a
+      <code>.png</code> (300 DPI) figure pair, following its instrument-specific
+      visualization conventions — axis orientation, palette, peak labels.</p>
+    </article>
+  </div>
+</section>
+
+<section id="skills" class="skills">
+  <div class="container">
+    <header class="section-head">
+      <h2>10 Skills in v1.0</h2>
+      <p>Each iterated on real supplier exports and signed off by a domain expert.
+        Click <code>git</code> or <code>curl</code> on any skill to copy the install command.</p>
+    </header>
+
+    <div class="grid">
+      <!-- 1 -->
+      <article class="card" data-skill="contact-angle-surface-tension-analysis">
+        <div class="card-tag">Wettability</div>
+        <h3 class="card-title">contact-angle-surface-tension-analysis</h3>
+        <p class="card-desc">Goniometer / drop-shape analysis. Extracts left/right
+          contact angles from screenshot bundles, computes symmetry &amp; wettability flags,
+          and renders a fixed-section Chinese report.</p>
+        <div class="card-actions">
+          <button class="copy-btn" data-method="git">📋 git</button>
+          <button class="copy-btn" data-method="curl">📋 curl</button>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="card" data-skill="dls-analysis">
+        <div class="card-tag">Particle size</div>
+        <h3 class="card-title">dls-analysis</h3>
+        <p class="card-desc">Dynamic light scattering. Parses Malvern-style
+          <code>.xls</code> exports, reports particle size distribution, PDI,
+          and peak/tail screening with robustness checks.</p>
+        <div class="card-actions">
+          <button class="copy-btn" data-method="git">📋 git</button>
+          <button class="copy-btn" data-method="curl">📋 curl</button>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="card" data-skill="ftir-analysis">
+        <div class="card-tag">Vibrational</div>
+        <h3 class="card-title">ftir-analysis</h3>
+        <p class="card-desc">FTIR spectra (<code>.csv</code>/<code>.txt</code>/
+          <code>.xls(x)</code>). Adaptive peak regression, broad-band flags,
+          conservative functional-group screening.</p>
+        <div class="card-actions">
+          <button class="copy-btn" data-method="git">📋 git</button>
+          <button class="copy-btn" data-method="curl">📋 curl</button>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="card" data-skill="pl-analysis">
+        <div class="card-tag">Photoluminescence</div>
+        <h3 class="card-title">pl-analysis</h3>
+        <p class="card-desc">PL spectra. Emission band positions and intensities,
+          publication-ready spectra, and a deliverable report.</p>
+        <div class="card-actions">
+          <button class="copy-btn" data-method="git">📋 git</button>
+          <button class="copy-btn" data-method="curl">📋 curl</button>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="card" data-skill="raman-analysis">
+        <div class="card-tag">Vibrational</div>
+        <h3 class="card-title">raman-analysis</h3>
+        <p class="card-desc">Raman spectra and <code>.zip</code> multi-spectrum
+          bundles. Per-spectrum bands, cross-replicate consistency, and
+          fluorescence-background warnings.</p>
+        <div class="card-actions">
+          <button class="copy-btn" data-method="git">📋 git</button>
+          <button class="copy-btn" data-method="curl">📋 curl</button>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="card" data-skill="tg-analysis">
+        <div class="card-tag">Thermal</div>
+        <h3 class="card-title">tg-analysis</h3>
+        <p class="card-desc">Thermogravimetry. Mass-loss steps and key
+          temperatures with a structured report ready for materials-chemistry
+          handoff.</p>
+        <div class="card-actions">
+          <button class="copy-btn" data-method="git">📋 git</button>
+          <button class="copy-btn" data-method="curl">📋 curl</button>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="card" data-skill="tpd-tpr-tpo-analysis">
+        <div class="card-tag">Chemisorption</div>
+        <h3 class="card-title">tpd-tpr-tpo-analysis</h3>
+        <p class="card-desc">Temperature-programmed desorption / reduction /
+          oxidation. Peak temperatures, integrated quantities, and engineered
+          report output.</p>
+        <div class="card-actions">
+          <button class="copy-btn" data-method="git">📋 git</button>
+          <button class="copy-btn" data-method="curl">📋 curl</button>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="card" data-skill="uv-vis-nir-drs-analysis">
+        <div class="card-tag">Optical</div>
+        <h3 class="card-title">uv-vis-nir-drs-analysis</h3>
+        <p class="card-desc">UV-Vis-NIR diffuse reflectance. Tauc fitting, Eg
+          estimation, multi-sample overlay plots in publication style.</p>
+        <div class="card-actions">
+          <button class="copy-btn" data-method="git">📋 git</button>
+          <button class="copy-btn" data-method="curl">📋 curl</button>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="card" data-skill="xafs-analysis">
+        <div class="card-tag">X-ray</div>
+        <h3 class="card-title">xafs-analysis</h3>
+        <p class="card-desc">X-ray absorption fine structure. E0 extraction,
+          k-space SNR quality, R-space apparent peaks, with Athena/Larch-aligned
+          interpretation language.</p>
+        <div class="card-actions">
+          <button class="copy-btn" data-method="git">📋 git</button>
+          <button class="copy-btn" data-method="curl">📋 curl</button>
+        </div>
+      </article>
+
+      <!-- 10 -->
+      <article class="card" data-skill="xrf-analysis">
+        <div class="card-tag">X-ray</div>
+        <h3 class="card-title">xrf-analysis</h3>
+        <p class="card-desc">X-ray fluorescence. Element list, relative content
+          ranking, and conservative composition reading that refuses to
+          misclaim mineral phase.</p>
+        <div class="card-actions">
+          <button class="copy-btn" data-method="git">📋 git</button>
+          <button class="copy-btn" data-method="curl">📋 curl</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="install" class="install">
+  <div class="container">
+    <header class="section-head">
+      <h2>Install</h2>
+      <p>Pick your Agent. Both install paths produce the same on-disk Skill.</p>
+    </header>
+
+    <div class="install-grid">
+
+      <article class="install-card">
+        <h3>Claude Code</h3>
+        <p>Drop any Skill into <code>~/.claude/skills/</code>:</p>
+        <pre><code>git clone https://github.com/SciCompass/SciFish
+cp -R SciFish/skills/raman-analysis ~/.claude/skills/</code></pre>
+        <p class="install-note">Or, one line:</p>
+        <pre><code>curl -fsSL https://scicompass.github.io/SciFish/install.sh | bash -s raman-analysis</code></pre>
+        <p class="install-note">Restart Claude Code. The Skill is now invocable by name.</p>
+      </article>
+
+      <article class="install-card">
+        <h3>Codex CLI</h3>
+        <p>Symlink the cloned <code>skills/</code> directory into Codex's
+          configured Skill path, or copy individual Skill directories there.
+          Consult <code>codex --help</code> for the path on your version.</p>
+        <pre><code>git clone https://github.com/SciCompass/SciFish
+ln -s "$(pwd)/SciFish/skills/raman-analysis" ~/path/to/codex/skills/</code></pre>
+      </article>
+
+    </div>
+
+    <div class="install-deps">
+      <h3>Python dependencies</h3>
+      <p>Skills' scripts assume a standard scientific Python stack. Install once:</p>
+      <pre><code>pip install numpy pandas scipy matplotlib seaborn lmfit pymatgen \
+  fabio h5py xraydb periodictable openpyxl chardet requests</code></pre>
+      <p class="muted">Recommended Python: 3.8+. Some Skills (e.g. <code>xafs-analysis</code>)
+        work best with <a href="https://xraypy.github.io/xraylarch/">Larch</a> available.
+        Each Skill's <code>references/instrument-profile.md</code> calls out optional deps.</p>
+    </div>
+
+    <div class="install-out">
+      <h3>Where outputs land</h3>
+      <p>Every Skill writes outputs under <code>output/</code> in your current
+        working directory:</p>
+      <pre><code>&lt;your-cwd&gt;/
+└── output/
+    ├── data/        # parsed/intermediate JSON
+    ├── figures/     # journal-grade .pdf + .png pairs
+    └── reports/     # final Markdown reports</code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap" class="roadmap">
+  <div class="container">
+    <header class="section-head">
+      <h2>Roadmap</h2>
+    </header>
+    <ul class="roadmap-list">
+      <li><strong>More Skills.</strong> Bring the remaining 11 instruments
+        (BET, NMR, XPS, XRD, HRMS, EPR, ICP-OES/MS, GPC, DSC, TG-DSC, EA) out
+        of internal validation and into this repo.</li>
+      <li><strong>Examples.</strong> Ship redacted example datasets and expected
+        outputs alongside each Skill so users can verify their setup
+        end-to-end.</li>
+      <li><strong>CI smoke tests.</strong> Lint and dry-run every Skill on every
+        PR.</li>
+      <li><strong>Multilingual reports.</strong> English templates for the
+        Skills that currently default to Chinese.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contributing" class="contributing">
+  <div class="container">
+    <header class="section-head">
+      <h2>Contributing</h2>
+    </header>
+    <div class="two-col">
+      <div>
+        <h3>Lowest-friction contributions</h3>
+        <ul>
+          <li>Peak / band / binding-energy / characteristic-temperature tables for an existing Skill</li>
+          <li>Edge-format support (vendor exports the parser fails on — attach a small redacted reproducer)</li>
+          <li>Bug fixes in <code>scripts/</code> that preserve existing test cases</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Bigger contributions</h3>
+        <ul>
+          <li>An entirely new instrument Skill — please open an Issue describing the instrument and your domain background <em>before</em> sending a large PR.</li>
+          <li>A new <code>visualization-guide.md</code> for an existing Skill if you publish in that field.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="contributing-note">
+      Full contributor guide:
+      <a href="https://github.com/SciCompass/SciFish/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> ·
+      Issues &amp; discussion:
+      <a href="https://github.com/SciCompass/SciFish/issues">GitHub Issues</a>.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <span class="brand-mark">⌬</span>
+      <strong>SciFish</strong> —
+      <span class="muted">open-source AI-Agent skill library for materials characterization.</span>
+    </div>
+    <nav class="footer-links">
+      <a href="https://github.com/SciCompass/SciFish">GitHub</a>
+      <a href="https://github.com/SciCompass/SciFish/blob/main/LICENSE">MIT License</a>
+      <a href="https://ai4s.shiyanjia.com/scifish/">SciFish product</a>
+    </nav>
+    <div class="muted small">© 2026 SciCompass. Made with care by domain experts.</div>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

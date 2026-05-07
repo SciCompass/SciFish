@@ -1,0 +1,4 @@
+v5
+promoted_at: 2026-04-24 15:47:16
+working_source: skills/tg-analysis/
+eval_score: N/A (manual production update with researcher-facing embedded-image reporting)

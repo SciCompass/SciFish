@@ -1,0 +1,28 @@
+{
+  "asset": "SciFish README hero banner",
+  "canonical": "scifish-hero.jpg",
+  "selected_from": "scifish-hero_002.jpg",
+  "candidates": [
+    "scifish-hero_001.jpg",
+    "scifish-hero_002.jpg",
+    "scifish-hero_003.jpg"
+  ],
+  "generated_at": "2026-05-07",
+  "model": "image-01",
+  "command": "mmx image generate",
+  "prompt": "Abstract horizontal panorama of luminous spectral waveforms intersecting a faint hexagonal molecular lattice, ethereal data-flow ribbons threading across deep space, asymmetric composition with generous breathing space at horizontal center for a headline overlay, soft volumetric studio lighting from upper edges with gentle inner glow on the glassy traces, materials of polished frosted glass and iridescent thin-film with subtle vector edges and fine cinematic grain, palette of deep slate and near-black backdrop with luminous teal accents and pale cyan highlights, occasional warm cream pinpoint stars, inspired by Stripe and Linear and Astro and Vercel website hero aesthetics combined with high-end scientific editorial illustration, cinematic depth of field, pristine, museum-grade 3D render with painterly precision",
+  "params": {
+    "width": 1920,
+    "height": 600,
+    "aspect_ratio": "16:5",
+    "n": 3,
+    "prompt_optimizer": true,
+    "aigc_watermark": false,
+    "seed": null
+  },
+  "notes": [
+    "Seed not fixed for the initial generation — model explored freely. To reproduce the chosen variant exactly, the original seed of scifish-hero_002 would need to be retrieved from MiniMax (mmx output did not surface per-image seeds).",
+    "Hexagonal molecular lattice motif from the prompt was not strongly picked up; model leaned into spectral-waveform interpretation across all three candidates. Aesthetically acceptable.",
+    "Candidates _001 and _003 retained as alternates for future swap or A/B experimentation."
+  ]
+}
